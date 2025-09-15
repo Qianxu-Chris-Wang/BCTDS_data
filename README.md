@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## Reproducing Figures
 
-Each figure has its own folder under `figures/` (e.g. `Figure_1_overview_cartoons/`, `Figure_2_illustration_waveguide/`, …).  
+Excluding Figures 6, 7 (waveguide CAD illustration), and 9 (dilution fridge diagram), each figure has its own folder under `figures/` (e.g. `Figure_1_overview_cartoons/`, `Figure_2_illustration_waveguide/`, …).  
 Inside each folder, you will find the Python script to generate the figure.
 
 Example for **Figure 1**:
