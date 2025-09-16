@@ -60,10 +60,6 @@ else:
 
 GAMMA, GAMMA_PHI, DRIVE_AMPL = 0.001, 0.0, 0.4
 
-# output dir
-root = "../plots/ringdowns_final_layout"
-os.makedirs(root, exist_ok=True)
-
 # ───────────────────────── helpers ───────────────────────────────────────
 def _simulate_one(f_drv):
     """Wrapper for a single frequency sweep point (thread-safe)."""
@@ -199,14 +195,6 @@ if __name__ == "__main__":
     cbar2.ax.set_ylabel(r"Log$_{10}$ (FFT$(\langle \sigma^{+}\sigma^{-} \rangle))$ (arb.)",
                         fontsize=30, labelpad=20)
     cbar2.ax.tick_params(labelsize=28)
-
-    # ───────────────────────── save & exit ───────────────────────────────────
-    # outfile = os.path.join(
-    #     root, f"NTLS_{N_TLS}_ringdown_fft_all_pulses_{datetime.datetime.now():%Y%m%d_%H%M%S}_prx_windows.png"
-    # )
-    # fig.savefig(outfile, dpi=180)
-    # plt.close(fig)
-    # print("✓ Figure saved →", outfile)
 
     outdir = os.path.join(os.path.dirname(__file__), "analysis_plots")
     os.makedirs(outdir, exist_ok=True)
